@@ -1,0 +1,44 @@
+package bicho;
+
+import java.util.NoSuchElementException;
+
+/**
+ *
+ * @author Breno
+ */
+//https://www.youtube.com/watch?v=M6lYob8STMI
+public class BST{
+    
+    Node root;
+    
+    public void addNode(int N, String name){
+        Node newNode = new Node(N,name);
+    }
+    
+    public boolean isEmpty(){
+        if(root.name.equals(null))
+            return true;
+        else
+            return false;
+    }
+  
+}
+
+class Node{
+        Node left;
+        Node right;
+        int N;
+        String name;
+
+        public Node() {
+        }
+
+        public Node(int N, String name) {
+            this.N = N;
+            this.name = name;
+        }
+        
+        public String toString(){
+            return name + " has a key "+ N;
+        }   
+}
